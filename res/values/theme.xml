@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyTheme" parent="@android:style/Theme.Black">
+        
+        <item name="android:textColor">#F0E68C</item>
+        <item name="android:buttonStyle">@style/myButton</item>
+    </style>
+    <style name="myButton" parent="@android:style/Widget.Button">
+    	<item name="android:background">@drawable/hbutton</item>
+	</style>
+</resources>
