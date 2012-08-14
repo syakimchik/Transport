@@ -13,7 +13,11 @@ public class TransportContactProvider extends ContentProvider{
 	public static final Uri CONTENT_URI = Uri.parse(
 			"content://by.belhard.db.transportcontactprovider");
 	
+	//public static final Uri CONTENT_BUS_TABLE_URI = Uri.parse("content://by.belhard.db.transportcontactprovider/bus");
+	
 	private SQLiteDatabase db;
+	
+	private static String table;
 	
 	@Override
 	public int delete(Uri arg0, String arg1, String[] arg2) {
@@ -41,16 +45,29 @@ public class TransportContactProvider extends ContentProvider{
 	}
 
 	@Override
-	public Cursor query(Uri arg0, String[] arg1, String arg2, String[] arg3,
-			String arg4) {
+	public Cursor query(Uri uri, String[] columns, String selection, String[] selectionArgs,
+			String sort) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		Cursor cursor = db.query(table, columns, selection, selectionArgs, null, null, sort);
+		cursor.setNotificationUri(getContext().getContentResolver(), uri);
+		return cursor;
 	}
 
 	@Override
 	public int update(Uri arg0, ContentValues arg1, String arg2, String[] arg3) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	
+	public static void setTable(String nameTable)
+	{
+		table = nameTable;
+	}
+	
+	public static String getTable()
+	{
+		return table;
 	}
 
 }

@@ -1,27 +1,51 @@
 package by.belhard.activity;
 
-import by.belhard.db.TransportContactProvider;
-import by.belhard.db.TransportHelper;
 import android.os.Bundle;
 import android.app.Activity;
-import android.database.Cursor;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends Activity {
-	
-	private Cursor mCursor;
-	
-	private static final String[] mContent = {
-		TransportHelper._ID, TransportHelper.NUMBER_OF_BUS, 
-		TransportHelper.NAME_ROUTE, TransportHelper.TYPE_TRANSPORT
-	};
-	
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        mCursor = managedQuery(TransportContactProvider.CONTENT_URI, mContent, null, null, null);
+        Button tmTableButton = (Button) findViewById(R.id.timetableButton);
+        tmTableButton.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), TimetableActivity.class);
+				startActivity(intent);
+			}
+		});
+        
+        Button searchButton = (Button) findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), SearchActivity.class);
+				startActivity(intent);
+			}
+		});
+        
+        Button settingsButton = (Button) findViewById(R.id.settingsButton);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), PreferencesActivity.class);
+				startActivity(intent);
+			}
+		});
     }
 
     @Override

@@ -3,10 +3,17 @@
     <string name="app_name">Transport</string>
     <string name="menu_settings">Settings</string>
     <string name="favorites">Избранное</string>
-    <string name="search">Поиск</string>
+    <string name="search">Остановки</string>
     <string name="settings">Настройки</string>
-    <string name="timetable">Расписание</string>
+    <string name="timetable">Транспорт</string>
     <string name="coperight">Yakimchik Sergei ©</string>
+    <string name="version">version 0.1.0</string>
     <string name="header">Расписание транспорта Минска</string>
+    <string name="all_settings">Общие настройки</string>
+    <string name="pr_time">Time</string>
+    <string name="past">Взгляд в прошлое</string>
+    <string name="past_summary">Какой транспорт только что ушёл</string>
+    <string name="future">Взгляд в будущее</string>
+    <string name="future_summary">Какой транспорт придёт</string>
 
 </resources>

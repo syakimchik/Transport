@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">    
+    
+    <PreferenceCategory 
+        android:title="@string/all_settings">
+        <EditTextPreference 
+            android:key="@string/pr_time"
+            android:title="@string/past"
+            android:summary="@string/past_summary"
+            android:defaultValue="10"
+            android:dialogTitle="Enter minuts (from 10 to 32)"/>
+        <EditTextPreference 
+            android:key="@string/pr_time"
+            android:title="@string/future"
+            android:summary="@string/future_summary"
+            android:defaultValue="10"
+            android:dialogTitle="Enter minuts (from 10 to 32)"/>
+    </PreferenceCategory>
+    
+</PreferenceScreen>

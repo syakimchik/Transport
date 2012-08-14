@@ -1,28 +1,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:background="@drawable/backgrd">
-    
-    <TextView 
-        android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backgrd" >
+
+    <TextView
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="@string/header"
         android:textColor="@color/white"
-        android:textSize="20dp"/>
-    
+        android:textSize="20dp" />
+
     <TableLayout
+        android:id="@+id/tableLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
-        
-        <TableRow 
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp">
+            android:layout_marginBottom="40dp" >
 
             <Button
                 android:id="@+id/favoritesButton"
@@ -31,50 +32,57 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
                 android:text="@string/favorites"
-                android:textSize="25dp"/>
-            
+                android:textSize="25dp" />
+
             <Button
-		        android:id="@+id/searchButton"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="@string/search"
-		        style="@style/myButton" 
-		        android:textSize="25dp"/>
-            
+                android:id="@+id/searchButton"
+                style="@style/myButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:textSize="25dp" />
         </TableRow>
-        
-        <TableRow 
+
+        <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            
+            android:layout_height="wrap_content" >
+
             <Button
-		        android:id="@+id/timetableButton"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="@string/timetable"
-		        style="@style/myButton"
-		        android:layout_marginRight="20dp" 
-		        android:textSize="25dp"/>
-            
+                android:id="@+id/timetableButton"
+                style="@style/myButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="@string/timetable"
+                android:textSize="25dp" />
+
             <Button
-		        android:id="@+id/settingsButton"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:text="@string/settings"
-		        style="@style/myButton" 
-		        android:textSize="25dp"/>
-            
+                android:id="@+id/settingsButton"
+                style="@style/myButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings"
+                android:textSize="25dp" />
         </TableRow>
-        
     </TableLayout>
-    
-    <TextView 
-        android:layout_height="wrap_content"
+
+    <TextView
+        android:id="@+id/version"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/version"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/version"
         android:layout_centerHorizontal="true"
         android:text="@string/coperight"
         android:textColor="@color/white"
-        android:textSize="18dp"/>
-    
+        android:textSize="18dp" />
+
 </RelativeLayout>

@@ -33,6 +33,7 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
     public static final String ROUTE_NAME = "name";
     
     // Constanst for table Timetable
+    public static final String TIMETABLE_TABLE = "timetable";
     public static final String BUS_ID = "bus_id";
     public static final String STATION_ID = "station_id";
     public static final String TIME_ID = "time_id";
@@ -53,18 +54,48 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		ContentValues busValues = new ContentValues();
 		
 		busValues.put(NUMBER_OF_BUS, "16");
-		busValues.put(NAME_ROUTE, "Р§РёР¶РѕРІРєР°-РђРЅРіР°СЂСЃРєР°СЏ");
+		busValues.put(NAME_ROUTE, "Чижовка-Ангарская");
 		busValues.put(TYPE_TRANSPORT_ID, "1");
 		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
 		
 		busValues.put(NUMBER_OF_BUS, "102");
-		busValues.put(NAME_ROUTE, "Р§РёР¶РѕРІРєР°-Р’РѕРєР·Р°Р»");
+		busValues.put(NAME_ROUTE, "Чижовка-Вокзал");
 		busValues.put(TYPE_TRANSPORT_ID, "1");
 		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
 		
 		busValues.put(NUMBER_OF_BUS, "16");
-		busValues.put(NAME_ROUTE, "Р§РёР¶РѕРІРєР°1-Р’РѕРєР·Р°Р»");
+		busValues.put(NAME_ROUTE, "Чижовка1-Автозаводская");
 		busValues.put(TYPE_TRANSPORT_ID, "2");
+		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
+		
+		busValues.put(NUMBER_OF_BUS, "8");
+		busValues.put(NAME_ROUTE, "ДС Сухарево – Бобруйская");
+		busValues.put(TYPE_TRANSPORT_ID, "2");
+		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
+		
+		busValues.put(NUMBER_OF_BUS, "9");
+		busValues.put(NAME_ROUTE, "ДС Кунцевщина - Городской вал");
+		busValues.put(TYPE_TRANSPORT_ID, "2");
+		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
+		
+		busValues.put(NUMBER_OF_BUS, "10");
+		busValues.put(NAME_ROUTE, "д/с Веснянка - Уманская");
+		busValues.put(TYPE_TRANSPORT_ID, "2");
+		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
+		
+		busValues.put(NUMBER_OF_BUS, "1");
+		busValues.put(NAME_ROUTE, "ДС Зеленый Луг - Мясникова");
+		busValues.put(TYPE_TRANSPORT_ID, "3");
+		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
+		
+		busValues.put(NUMBER_OF_BUS, "2");
+		busValues.put(NAME_ROUTE, "Мясникова - Октябрьская");
+		busValues.put(TYPE_TRANSPORT_ID, "3");
+		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
+		
+		busValues.put(NUMBER_OF_BUS, "3");
+		busValues.put(NAME_ROUTE, "ДС Озеро - ст. м. Тракторный завод");
+		busValues.put(TYPE_TRANSPORT_ID, "3");
 		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
 		
 		// setting data for table with name Type Transport
@@ -73,13 +104,13 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		
 		ContentValues typesValues = new ContentValues();
 		
-		typesValues.put(TYPE, "РђРІС‚РѕР±СѓСЃ");
+		typesValues.put(TYPE, "автобус");
 		db.insert(TYPE_TRANSPORT, TYPE, typesValues);
 		
-		typesValues.put(TYPE, "РўСЂРѕР»Р»РµР№Р±СѓСЃ");
+		typesValues.put(TYPE, "троллейбус");
 		db.insert(TYPE_TRANSPORT, TYPE, typesValues);
 		
-		typesValues.put(TYPE, "РўСЂР°РјРІР°Р№");
+		typesValues.put(TYPE, "трамвай");
 		db.insert(TYPE_TRANSPORT, TYPE, typesValues);
 		
 		// setting data for table with name Station
@@ -88,22 +119,22 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		
 		ContentValues stationsValues = new ContentValues();
 		
-		stationsValues.put(NAME_OF_STATION, "Р›РѕС€РёС†Р°");
+		stationsValues.put(NAME_OF_STATION, "Голодеда");
 		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
 		
-		stationsValues.put(NAME_OF_STATION, "РљРёСЂРѕРІР°");
+		stationsValues.put(NAME_OF_STATION, "Больница");
 		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
 		
-		stationsValues.put(NAME_OF_STATION, "Р“РѕР»РѕРґРµРґР°");
+		stationsValues.put(NAME_OF_STATION, "ав.Чижовка");
 		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
 		
-		stationsValues.put(NAME_OF_STATION, "10-СЏ Р±РѕР»СЊРЅРёС†Р°");
+		stationsValues.put(NAME_OF_STATION, "Автозаводская");
 		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
 		
-		stationsValues.put(NAME_OF_STATION, "Р’РѕРєР·Р°Р»");
+		stationsValues.put(NAME_OF_STATION, "Зоопарк»");
 		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
 		
-		stationsValues.put(NAME_OF_STATION, "Р§РёР¶РѕРІРєР°");
+		stationsValues.put(NAME_OF_STATION, "Вокзал");
 		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
 		
 		// setting data for table with name Time
@@ -144,17 +175,63 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		
 		ContentValues routeValues = new ContentValues();
 		
-		routeValues.put(ROUTE_NAME, "РїСЂСЏРјРѕ");
+		routeValues.put(ROUTE_NAME, "прямо");
 		db.insert(ROUTE_TABLE, ROUTE_NAME, routeValues);
 		
-		routeValues.put(ROUTE_NAME, "РѕР±СЂР°С‚РЅРѕ");
+		routeValues.put(ROUTE_NAME, "обратно");
 		db.insert(ROUTE_TABLE, ROUTE_NAME, routeValues);
+		
+		// setting data for table with name Timetable
+		db.execSQL("CREATE TABLE "+TIMETABLE_TABLE+" (_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + 
+					BUS_ID+" INTEGER NOT NULL, "+STATION_ID+" INTEGER NOT NULL);");
+		
+		ContentValues tmTable = new ContentValues();
+		
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "1");
+		tmTable.put(TIME_ID, "1");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "2");
+		tmTable.put(TIME_ID, "2");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "3");
+		tmTable.put(TIME_ID, "3");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "2");
+		tmTable.put(STATION_ID, "1");
+		tmTable.put(TIME_ID, "1");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "3");
+		tmTable.put(STATION_ID, "1");
+		tmTable.put(TIME_ID, "1");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "4");
+		tmTable.put(STATION_ID, "1");
+		tmTable.put(TIME_ID, "1");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "3");
+		tmTable.put(TIME_ID, "3");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int arg1, int arg2) {
 		// TODO Auto-generated method stub
 		db.execSQL("DROP TABLE IF NOT EXISTS " + BUS_TABLE);
+		db.execSQL("DROP TABLE IF NOT EXISTS " + TYPE_TRANSPORT);
+		db.execSQL("DROP TABLE IF NOT EXISTS " + STATION_TABLE);
+		db.execSQL("DROP TABLE IF NOT EXISTS " + TIME_TABLE);
+		db.execSQL("DROP TABLE IF NOT EXISTS " + ROUTE_TABLE);
+		db.execSQL("DROP TABLE IF NOT EXISTS " + TIMETABLE_TABLE);
 		onCreate(db);
 	}
 
