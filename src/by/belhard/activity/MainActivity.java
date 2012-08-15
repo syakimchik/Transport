@@ -1,5 +1,6 @@
 package by.belhard.activity;
 
+import by.belhard.preference.PreferencesActivity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -53,4 +54,5 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
 }

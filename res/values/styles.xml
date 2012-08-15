@@ -1,7 +1,12 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="AppTheme" parent="android:Theme.Light" />
     <color name="white">#FFFFFF</color>
     <color name="DimGray">#696969</color>
+    <color name="gray61">#363636</color>
+    <color name="grey11">#473C8B</color>
+    <style name="PreferencesTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@drawable/stars</item>
+    </style>
 
 </resources>

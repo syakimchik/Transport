@@ -27,11 +27,13 @@
             android:name=".TimetableActivity"
             android:label="@string/timetable">
         </activity>
-        <activity android:name=".BusActivity"></activity>
-        <activity android:name=".TrolleybusActivity"></activity>
-        <activity android:name=".TramActivity"></activity>
-        <activity android:name=".SearchActivity"></activity>
-        <activity android:name=".PreferencesActivity"></activity>
+        <activity android:name=".BusActivity"/>
+        <activity android:name=".TrolleybusActivity"/>
+        <activity android:name=".TramActivity"/>
+        <activity android:name=".SearchActivity"/>
+        <activity 
+            android:name="by.belhard.preference.PreferencesActivity"
+            android:theme="@style/PreferencesTheme"/>
     </application>
 
 </manifest>

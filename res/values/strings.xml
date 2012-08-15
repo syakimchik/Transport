@@ -12,8 +12,11 @@
     <string name="all_settings">Общие настройки</string>
     <string name="pr_time">Time</string>
     <string name="past">Взгляд в прошлое</string>
-    <string name="past_summary">Какой транспорт только что ушёл</string>
+    <string name="past_summary">Полезно знать, какой транспорт убыл</string>
     <string name="future">Взгляд в будущее</string>
-    <string name="future_summary">Какой транспорт придёт</string>
+    <string name="future_summary">Какой транспорт прибудет на остановку</string>
+    <string name="min">мин</string>
+    <string name="toast_past">Взгляд в прошлое установлен на</string>
+    <string name="toast_future">Взгляд в будущее установлен на</string>
 
 </resources>
