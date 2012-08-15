@@ -32,7 +32,7 @@ public final class PastSeekBarPreference extends DialogPreference implements OnS
     private final int mMinValue;
     
     // Current value
-    private int mCurrentValue;
+    private static int mCurrentValue = 5;
     
     // View elements
     private SeekBar mSeekBar;
@@ -50,7 +50,7 @@ public final class PastSeekBarPreference extends DialogPreference implements OnS
     @Override
     protected View onCreateDialogView() {
 		// Get current value from preferences
-		mCurrentValue = getPersistedInt(mDefaultValue);
+		mCurrentValue = 5; //getPersistedInt(mDefaultValue);
 		
 		// Inflate layout
 		LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -112,5 +112,9 @@ public final class PastSeekBarPreference extends DialogPreference implements OnS
 
     public void onStopTrackingTouch(SeekBar seek) {
     	// Not used
+    }
+    
+    public static int getValue(){
+    	return mCurrentValue;
     }
 }

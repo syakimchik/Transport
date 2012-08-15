@@ -1,5 +1,7 @@
 package by.belhard.activity;
 
+import by.belhard.preference.FutureSeekBarPreference;
+import by.belhard.preference.PastSeekBarPreference;
 import by.belhard.preference.PreferencesActivity;
 import android.os.Bundle;
 import android.app.Activity;
@@ -10,6 +12,10 @@ import android.widget.Button;
 
 public class MainActivity extends Activity {
 
+	private int mFutureValue;
+	private int mPasteValue;
+	
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +27,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setClass(getApplicationContext(), TimetableActivity.class);
+				intent.setClass(getApplicationContext(), TimetableTabActivity.class);
 				startActivity(intent);
 			}
 		});
@@ -32,7 +38,7 @@ public class MainActivity extends Activity {
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent();
-				intent.setClass(getApplicationContext(), SearchActivity.class);
+				intent.setClass(getApplicationContext(), SearchTabActivity.class);
 				startActivity(intent);
 			}
 		});
@@ -54,5 +60,29 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    
+    @Override
+    public void onResume(){
+    	super.onResume();
+    	
+    	setFutureValue(FutureSeekBarPreference.getValue());
+    	setPasteValue(PastSeekBarPreference.getValue());
+    }
+
+	public int getFutureValue() {
+		return mFutureValue;
+	}
+
+	public void setFutureValue(int mFutureValue) {
+		this.mFutureValue = mFutureValue;
+	}
+
+	public int getPasteValue() {
+		return mPasteValue;
+	}
+
+	public void setPasteValue(int mPasteValue) {
+		this.mPasteValue = mPasteValue;
+	}
     
 }

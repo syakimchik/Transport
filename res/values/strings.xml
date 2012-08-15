@@ -3,7 +3,7 @@
     <string name="app_name">Transport</string>
     <string name="menu_settings">Settings</string>
     <string name="favorites">Избранное</string>
-    <string name="search">Остановки</string>
+    <string name="stations">Остановки</string>
     <string name="settings">Настройки</string>
     <string name="timetable">Транспорт</string>
     <string name="coperight">Yakimchik Sergei ©</string>
@@ -18,5 +18,14 @@
     <string name="min">мин</string>
     <string name="toast_past">Взгляд в прошлое установлен на</string>
     <string name="toast_future">Взгляд в будущее установлен на</string>
+    <string name="pc_past">PastSeekBarPreference</string>
+    <string name="pc_future">FutureSeekBarPreference</string>
+    <string name="search_station">Поиск остановки</string>
+    <string name="buses">Автобусы</string>
+    <string name="trollybuses">Троллейбусы</string>
+    <string name="trams">Трамваи</string>
+    <string name="name_station">Остановка:</string>
+    <string name="ok">Поиск</string>
+    <string name="result">Результат поиска:</string>
 
 </resources>

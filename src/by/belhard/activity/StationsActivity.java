@@ -10,7 +10,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-public class SearchActivity extends Activity{
+public class StationsActivity extends Activity{
 	
 	private ListView list;
 	private ListAdapter mAdapter;
@@ -22,13 +22,13 @@ public class SearchActivity extends Activity{
 	@Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.search_activity);
+        setContentView(R.layout.stations);
         
         list = (ListView) findViewById(R.id.stationListView);
 		TransportContactProvider.setTable(TransportHelper.STATION_TABLE);
 		Uri uri = Uri.withAppendedPath(TransportContactProvider.CONTENT_URI, "/"+TransportHelper.STATION_TABLE);
 		mCursor = managedQuery(uri, mContent, null, null, TransportHelper.NAME_OF_STATION);
-		mAdapter = new SimpleCursorAdapter(this, R.layout.search_item, mCursor, 
+		mAdapter = new SimpleCursorAdapter(this, R.layout.station_item, mCursor, 
 				new String[] { TransportHelper.NAME_OF_STATION}, 
 				new int[] 
 						{R.id.stationTextView});

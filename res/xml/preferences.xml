@@ -6,7 +6,7 @@
         android:title="@string/all_settings">
         
          <by.belhard.preference.FutureSeekBarPreference
-             android:key="FutureSeekBarPreference"
+             android:key="@string/pc_future"
              android:title="@string/future"
 		     android:dialogTitle="@string/past"
 		     android:summary="@string/future_summary"
@@ -14,7 +14,7 @@
 		     android:defaultValue="20"/>  
 		     
          <by.belhard.preference.PastSeekBarPreference
-             android:key="PastSeekBarPreference"
+             android:key="@string/pc_past"
              android:title="@string/past"
 		     android:dialogTitle="@string/past"
 		     android:summary="@string/past_summary"

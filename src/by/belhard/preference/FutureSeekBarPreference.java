@@ -32,7 +32,7 @@ public final class FutureSeekBarPreference extends DialogPreference implements O
     private final int mMinValue;
     
     // Current value
-    private int mCurrentValue;
+    private static int mCurrentValue=10;
     
     // View elements
     private SeekBar mSeekBar;
@@ -50,7 +50,7 @@ public final class FutureSeekBarPreference extends DialogPreference implements O
     @Override
     protected View onCreateDialogView() {
 		// Get current value from preferences
-		mCurrentValue = getPersistedInt(mDefaultValue);
+		mCurrentValue = 10; //getPersistedInt(mDefaultValue);
 		
 		// Inflate layout
 		LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -89,10 +89,10 @@ public final class FutureSeekBarPreference extends DialogPreference implements O
 	
 		// Notify activity about changes (to update preference summary line)
 		notifyChanged();
-	    }
+	}
 	
 	    @Override
-	    public CharSequence getSummary() {
+    public CharSequence getSummary() {
 		// Format summary string with current value
 		String summary = super.getSummary().toString();
 		int value = getPersistedInt(mDefaultValue);
@@ -112,5 +112,9 @@ public final class FutureSeekBarPreference extends DialogPreference implements O
 
     public void onStopTrackingTouch(SeekBar seek) {
     	// Not used
+    }
+    
+    public static int getValue(){
+    	return mCurrentValue;
     }
 }

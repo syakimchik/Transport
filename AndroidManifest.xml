@@ -24,16 +24,22 @@
             </intent-filter>
         </activity>
         <activity 
-            android:name=".TimetableActivity"
+            android:name=".TimetableTabActivity"
             android:label="@string/timetable">
         </activity>
         <activity android:name=".BusActivity"/>
         <activity android:name=".TrolleybusActivity"/>
         <activity android:name=".TramActivity"/>
-        <activity android:name=".SearchActivity"/>
+        <activity android:name=".StationsActivity"/>
         <activity 
             android:name="by.belhard.preference.PreferencesActivity"
             android:theme="@style/PreferencesTheme"/>
+        <activity 
+            android:name=".SearchTabActivity"
+            android:label="@string/stations"/>
+        <activity 
+            android:name=".SearchStationActivity"
+            android:label="@string/search_station"/>
     </application>
 
 </manifest>
