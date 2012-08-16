@@ -131,7 +131,7 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		stationsValues.put(NAME_OF_STATION, "Автозаводская");
 		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
 		
-		stationsValues.put(NAME_OF_STATION, "Зоопарк»");
+		stationsValues.put(NAME_OF_STATION, "Зоопарк");
 		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
 		
 		stationsValues.put(NAME_OF_STATION, "Вокзал");
@@ -139,32 +139,32 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		
 		// setting data for table with name Time
 		db.execSQL("CREATE TABLE "+TIME_TABLE+" (_id INTEGER PRIMARY KEY  AUTOINCREMENT NOT NULL, "+
-					TIME_DEPARTURE+" VARCHAR(5) NOT NULL, "+DAY_OF_WEEK+" BOOLEAN NOT NULL, "
+					TIME_DEPARTURE+" TIME NOT NULL, "+DAY_OF_WEEK+" BOOLEAN NOT NULL, "
 					+ROUTE_ID+" INTEGER NOT NULL);");
 		
 		ContentValues timeValues = new ContentValues();
 		
-		timeValues.put(TIME_DEPARTURE, "19.04");
+		timeValues.put(TIME_DEPARTURE, "19:04");
 		timeValues.put(DAY_OF_WEEK, "true");
 		timeValues.put(ROUTE_ID, "1");
 		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
 		
-		timeValues.put(TIME_DEPARTURE, "19.07");
+		timeValues.put(TIME_DEPARTURE, "19:07");
 		timeValues.put(DAY_OF_WEEK, "true");
 		timeValues.put(ROUTE_ID, "1");
 		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
 		
-		timeValues.put(TIME_DEPARTURE, "10.24");
+		timeValues.put(TIME_DEPARTURE, "10:24");
 		timeValues.put(DAY_OF_WEEK, "true");
 		timeValues.put(ROUTE_ID, "2");
 		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
 		
-		timeValues.put(TIME_DEPARTURE, "13.47");
+		timeValues.put(TIME_DEPARTURE, "13:47");
 		timeValues.put(DAY_OF_WEEK, "true");
 		timeValues.put(ROUTE_ID, "2");
 		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
 		
-		timeValues.put(TIME_DEPARTURE, "19.01");
+		timeValues.put(TIME_DEPARTURE, "19:01");
 		timeValues.put(DAY_OF_WEEK, "true");
 		timeValues.put(ROUTE_ID, "2");
 		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
@@ -183,7 +183,7 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		
 		// setting data for table with name Timetable
 		db.execSQL("CREATE TABLE "+TIMETABLE_TABLE+" (_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + 
-					BUS_ID+" INTEGER NOT NULL, "+STATION_ID+" INTEGER NOT NULL);");
+					BUS_ID+" INTEGER NOT NULL, "+STATION_ID+" INTEGER NOT NULL, "+TIME_ID+" INTEGER NOT NULL);");
 		
 		ContentValues tmTable = new ContentValues();
 		

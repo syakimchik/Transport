@@ -27,6 +27,7 @@ public class StationsActivity extends Activity{
         list = (ListView) findViewById(R.id.stationListView);
 		TransportContactProvider.setTable(TransportHelper.STATION_TABLE);
 		Uri uri = Uri.withAppendedPath(TransportContactProvider.CONTENT_URI, "/"+TransportHelper.STATION_TABLE);
+		//String sql = "select timetable._id, station.name_of_station from timetable INNER JOIN station ON timetable.station_id=station._id WHERE timetable.bus_id="+BusActivity.ID;
 		mCursor = managedQuery(uri, mContent, null, null, TransportHelper.NAME_OF_STATION);
 		mAdapter = new SimpleCursorAdapter(this, R.layout.station_item, mCursor, 
 				new String[] { TransportHelper.NAME_OF_STATION}, 

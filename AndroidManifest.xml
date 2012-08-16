@@ -25,21 +25,34 @@
         </activity>
         <activity 
             android:name=".TimetableTabActivity"
-            android:label="@string/timetable">
-        </activity>
-        <activity android:name=".BusActivity"/>
-        <activity android:name=".TrolleybusActivity"/>
-        <activity android:name=".TramActivity"/>
-        <activity android:name=".StationsActivity"/>
+            android:label="@string/timetable"/>
+        <activity 
+            android:name=".BusActivity"
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name=".TrolleybusActivity"
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name=".TramActivity"
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name=".StationsActivity"
+            android:screenOrientation="portrait"/>
         <activity 
             android:name="by.belhard.preference.PreferencesActivity"
-            android:theme="@style/PreferencesTheme"/>
+            android:theme="@style/PreferencesTheme"
+            android:screenOrientation="portrait"/>
         <activity 
             android:name=".SearchTabActivity"
-            android:label="@string/stations"/>
+            android:label="@string/stations"
+            android:screenOrientation="portrait"/>
         <activity 
             android:name=".SearchStationActivity"
-            android:label="@string/search_station"/>
+            android:label="@string/search_station"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ResultSearchActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

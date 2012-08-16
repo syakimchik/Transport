@@ -5,6 +5,7 @@
     <color name="DimGray">#696969</color>
     <color name="gray61">#363636</color>
     <color name="grey11">#473C8B</color>
+    <color name="black">#000000</color>
     <style name="PreferencesTheme" parent="@android:style/Theme.Black.NoTitleBar">
         <item name="android:windowBackground">@drawable/stars</item>
     </style>

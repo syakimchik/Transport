@@ -15,7 +15,7 @@ public class TransportContactProvider extends ContentProvider{
 	
 	//public static final Uri CONTENT_BUS_TABLE_URI = Uri.parse("content://by.belhard.db.transportcontactprovider/bus");
 	
-	private SQLiteDatabase db;
+	private static SQLiteDatabase db;
 	
 	private static String table;
 	
@@ -68,6 +68,16 @@ public class TransportContactProvider extends ContentProvider{
 	public static String getTable()
 	{
 		return table;
+	}
+	
+	public static Cursor getMyQuery(String sql)
+	{
+		Cursor result = null;
+		if(db!=null)
+		{
+			result = db.rawQuery(sql, null);
+		}
+		return result;
 	}
 
 }

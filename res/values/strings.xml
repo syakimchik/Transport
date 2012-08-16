@@ -25,7 +25,12 @@
     <string name="trollybuses">Троллейбусы</string>
     <string name="trams">Трамваи</string>
     <string name="name_station">Остановка:</string>
+    <string name="type_transport">Тип транспорта:</string>
     <string name="ok">Поиск</string>
     <string name="result">Результат поиска:</string>
+    <string name="forthright">Прямо</string>
+    <string name="back">Обратно</string>
+    <string name="direction">Направление:</string>
+    <string name="number_tr">Номер:</string>
 
 </resources>
