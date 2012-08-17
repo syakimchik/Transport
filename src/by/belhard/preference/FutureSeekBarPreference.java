@@ -50,7 +50,7 @@ public final class FutureSeekBarPreference extends DialogPreference implements O
     @Override
     protected View onCreateDialogView() {
 		// Get current value from preferences
-		mCurrentValue = 10; //getPersistedInt(mDefaultValue);
+		getPersistedInt(mDefaultValue);
 		
 		// Inflate layout
 		LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);

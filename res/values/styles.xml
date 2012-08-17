@@ -6,6 +6,8 @@
     <color name="gray61">#363636</color>
     <color name="grey11">#473C8B</color>
     <color name="black">#000000</color>
+    <color name="firebrick">#B22222</color>
+    <color name="yellow">#FFFF00</color>
     <style name="PreferencesTheme" parent="@android:style/Theme.Black.NoTitleBar">
         <item name="android:windowBackground">@drawable/stars</item>
     </style>

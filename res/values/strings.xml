@@ -2,7 +2,7 @@
 
     <string name="app_name">Transport</string>
     <string name="menu_settings">Settings</string>
-    <string name="favorites">Избранное</string>
+    <string name="about">О приложении</string>
     <string name="stations">Остановки</string>
     <string name="settings">Настройки</string>
     <string name="timetable">Транспорт</string>
@@ -32,5 +32,7 @@
     <string name="back">Обратно</string>
     <string name="direction">Направление:</string>
     <string name="number_tr">Номер:</string>
+    <string name="current_time">Текущее время:</string>
+    <string name="dialog">Пожалуйста, выберите направление</string>
 
 </resources>

@@ -3,6 +3,9 @@ package by.belhard.activity;
 import by.belhard.db.TransportContactProvider;
 import by.belhard.db.TransportHelper;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -24,6 +27,13 @@ public class BusActivity extends Activity{
 	public static int POS;
 	public static long ID;
 	public static boolean flag = false;
+	public static int direction = 1;
+	
+
+	private static final int IDM_forthright = 102;
+	private static final int IDM_back = 103;
+	
+	private final CharSequence[] mActions = {"Прямо", "Обратно"};
 	
 	private static final String[] mContent = {
 		TransportHelper._ID, TransportHelper.NUMBER_OF_BUS, TransportHelper.NAME_ROUTE, TransportHelper.TYPE_TRANSPORT_ID
@@ -52,12 +62,44 @@ public class BusActivity extends Activity{
 				// TODO Auto-generated method stub
 				ID = id;
 				POS = pos;
-				//showDialog((int) list.getAdapter().getItemId(pos));
 				flag=true;
-				Intent intent = new Intent();
-				intent.setClass(getApplicationContext(), ResultSearchActivity.class);
-				startActivity(intent);
+				showDialog((int) list.getAdapter().getItemId(pos));
 			}
 		});
+	}
+	
+	@Override
+	protected Dialog onCreateDialog(final int id)
+	{
+		Log.d("My", "YES");
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle(getString(R.string.dialog));
+		builder.setItems(mActions, new DialogInterface.OnClickListener(){
+
+			public void onClick(DialogInterface arg0, int which) {
+				// TODO Auto-generated method stub
+				switch (which+102) {
+				case IDM_forthright:
+					direction = 1;
+					CallActivity();
+					break;
+				case IDM_back:
+					direction = 2;
+					CallActivity();
+					break;
+				default:
+					break;
+				}
+			}	
+		});
+		
+		return builder.create();
+	}
+	
+	private void CallActivity()
+	{
+		Intent intent = new Intent();
+		intent.setClass(getApplicationContext(), ResultSearchActivity.class);
+		startActivity(intent);
 	}
 }

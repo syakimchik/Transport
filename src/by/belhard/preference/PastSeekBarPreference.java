@@ -50,7 +50,7 @@ public final class PastSeekBarPreference extends DialogPreference implements OnS
     @Override
     protected View onCreateDialogView() {
 		// Get current value from preferences
-		mCurrentValue = 5; //getPersistedInt(mDefaultValue);
+	    getPersistedInt(mDefaultValue);
 		
 		// Inflate layout
 		LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
