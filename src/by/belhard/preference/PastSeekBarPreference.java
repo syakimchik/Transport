@@ -117,4 +117,8 @@ public final class PastSeekBarPreference extends DialogPreference implements OnS
     public static int getValue(){
     	return mCurrentValue;
     }
+    
+    public static void setValue(int value){
+    	mCurrentValue = value;
+    }
 }

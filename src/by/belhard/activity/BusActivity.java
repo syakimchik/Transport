@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -26,7 +25,6 @@ public class BusActivity extends Activity{
 	
 	public static int POS;
 	public static long ID;
-	public static boolean flag = false;
 	public static int direction = 1;
 	
 
@@ -62,7 +60,6 @@ public class BusActivity extends Activity{
 				// TODO Auto-generated method stub
 				ID = id;
 				POS = pos;
-				flag=true;
 				showDialog((int) list.getAdapter().getItemId(pos));
 			}
 		});
@@ -71,7 +68,6 @@ public class BusActivity extends Activity{
 	@Override
 	protected Dialog onCreateDialog(final int id)
 	{
-		Log.d("My", "YES");
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle(getString(R.string.dialog));
 		builder.setItems(mActions, new DialogInterface.OnClickListener(){

@@ -84,5 +84,12 @@ public class MainActivity extends Activity {
 	public void setPasteValue(int mPasteValue) {
 		this.mPasteValue = mPasteValue;
 	}
+	
+	@Override
+	public void onPause(){
+		super.onPause();
+		FutureSeekBarPreference.setValue(mFutureValue);
+		PastSeekBarPreference.setValue(mPasteValue);
+	}
     
 }

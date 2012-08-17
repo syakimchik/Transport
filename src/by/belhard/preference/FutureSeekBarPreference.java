@@ -117,4 +117,8 @@ public final class FutureSeekBarPreference extends DialogPreference implements O
     public static int getValue(){
     	return mCurrentValue;
     }
+    
+    public static void setValue(int value){
+    	mCurrentValue = value;
+    }
 }
