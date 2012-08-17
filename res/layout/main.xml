@@ -12,7 +12,62 @@
         android:text="@string/header"
         android:textColor="@color/white"
         android:textSize="20dp" />
+    
+   <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+       
+        <Button
+            android:id="@+id/searchButton"
+            style="@style/myButton"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/stations"
+            android:textSize="25dp" />
+        
+        <Button
+            android:id="@+id/timetableButton"
+            style="@style/myButton"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="40dp"
+            android:text="@string/timetable"
+            android:textSize="25dp" />
 
+       <Button
+           android:id="@+id/settingsButton"
+           style="@style/myButton"
+           android:layout_width="166dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="right"
+           android:layout_marginBottom="40dp"
+           android:layout_marginRight="10dp"
+           android:text="@string/settings"
+           android:textSize="25dp" />
+       
+       <Button
+           android:id="@+id/aboutButton"
+           style="@style/myButton"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="left"
+           android:layout_marginBottom="40dp"
+           android:layout_marginLeft="10dp"
+           android:text="@string/about"
+           android:textSize="25dp" />
+        
+    </LinearLayout>
+
+   <!-- 
     <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="wrap_content"
@@ -26,12 +81,12 @@
             android:layout_marginBottom="40dp" >
 
             <Button
-                android:id="@+id/favoritesButton"
+                android:id="@+id/aboutButton"
                 style="@style/myButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
-                android:text="@string/favorites"
+                android:text="@string/about"
                 android:textSize="25dp" />
 
             <Button
@@ -65,6 +120,8 @@
                 android:textSize="25dp" />
         </TableRow>
     </TableLayout>
+    
+     -->
 
     <TextView
         android:id="@+id/version"
