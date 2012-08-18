@@ -169,6 +169,11 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		timeValues.put(ROUTE_ID, "2");
 		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
 		
+		timeValues.put(TIME_DEPARTURE, "2:15");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
 		// setting data for table with name Route
 		db.execSQL("CREATE TABLE "+ROUTE_TABLE+" (_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + 
 					ROUTE_NAME+" TEXT NOT NULL);");
@@ -220,6 +225,11 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		tmTable.put(BUS_ID, "1");
 		tmTable.put(STATION_ID, "3");
 		tmTable.put(TIME_ID, "3");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "2");
+		tmTable.put(STATION_ID, "4");
+		tmTable.put(TIME_ID, "6");
 		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
 	}
 

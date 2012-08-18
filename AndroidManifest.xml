@@ -54,6 +54,9 @@
         <activity
             android:name=".ResultSearchActivity"
             android:screenOrientation="portrait"/>
+        <activity 
+            android:name=".SearchAllTransportActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

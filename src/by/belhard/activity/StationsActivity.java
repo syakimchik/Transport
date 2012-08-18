@@ -1,14 +1,19 @@
 package by.belhard.activity;
 
+import by.belhard.constants.ConstantValues;
 import by.belhard.db.TransportContactProvider;
 import by.belhard.db.TransportHelper;
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.AdapterView.OnItemClickListener;
 
 public class StationsActivity extends Activity{
 	
@@ -27,7 +32,6 @@ public class StationsActivity extends Activity{
         list = (ListView) findViewById(R.id.stationListView);
 		TransportContactProvider.setTable(TransportHelper.STATION_TABLE);
 		Uri uri = Uri.withAppendedPath(TransportContactProvider.CONTENT_URI, "/"+TransportHelper.STATION_TABLE);
-		//String sql = "select timetable._id, station.name_of_station from timetable INNER JOIN station ON timetable.station_id=station._id WHERE timetable.bus_id="+BusActivity.ID;
 		mCursor = managedQuery(uri, mContent, null, null, TransportHelper.NAME_OF_STATION);
 		mAdapter = new SimpleCursorAdapter(this, R.layout.station_item, mCursor, 
 				new String[] { TransportHelper.NAME_OF_STATION}, 
@@ -35,6 +39,19 @@ public class StationsActivity extends Activity{
 						{R.id.stationTextView});
 		
 		list.setAdapter(mAdapter);
+		
+		list.setOnItemClickListener(new OnItemClickListener() {
+
+			public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
+					long id) {
+				// TODO Auto-generated method stub
+				ConstantValues.STATION_ID = id;
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), SearchAllTransportActivity.class);
+				startActivity(intent);
+			}
+		});
+		
     }
 
 }
