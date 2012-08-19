@@ -1,6 +1,11 @@
 TRANSPORT
-========
+===
 ==========About project=============
-The application is a schedule of public transport in Minsk.
+Transport - a small application, which is a schedule of public transport in Minsk.
+The application is equipped with the search for the right stop, driving directions, searching vehicles (you can make a choice of transport,
+The application uses only ground transportation). This appendix contains the functionality to set the interval time of transport,
+which has already left and that will come. As storage schedule using a database SQLite, which works closely application and provides
+all the necessary operations. The application is easy to use and has a user-friendly and beautiful interface. The result is a simple, in terms of use,
+end-user application. This application is a training, so the database keeps only demos of the application.
 ====================================
 Author: Yakimchik Sergei
