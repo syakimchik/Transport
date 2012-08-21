@@ -53,6 +53,17 @@ public class MainActivity extends Activity {
 				startActivity(intent);
 			}
 		});
+        
+        Button aboutButton = (Button) findViewById(R.id.aboutButton);
+        aboutButton.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), AboutActivity.class);
+				startActivity(intent);
+			}
+		});
     }
 
     @Override

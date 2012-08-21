@@ -94,7 +94,7 @@
 	        android:completionThreshold="1"
 	        android:layout_marginLeft="10dp"
 	        android:textColor="@color/black"
-	        android:numeric="decimal"/>
+	        android:inputType="number"/>
         
     </LinearLayout>
     

@@ -54,7 +54,12 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		ContentValues busValues = new ContentValues();
 		
 		busValues.put(NUMBER_OF_BUS, "16");
-		busValues.put(NAME_ROUTE, "Чижовка-Ангарская");
+		busValues.put(NAME_ROUTE, "д/с Ангарская-4 - д/с Чижовка");
+		busValues.put(TYPE_TRANSPORT_ID, "1");
+		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
+		
+		busValues.put(NUMBER_OF_BUS, "21");
+		busValues.put(NAME_ROUTE, "д/с Шабаны - д/с Чижовка");
 		busValues.put(TYPE_TRANSPORT_ID, "1");
 		db.insert(BUS_TABLE, NUMBER_OF_BUS, busValues);
 		
@@ -137,6 +142,21 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		stationsValues.put(NAME_OF_STATION, "Вокзал");
 		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
 		
+		stationsValues.put(NAME_OF_STATION, "Кабушкина ул.");
+		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
+		
+		stationsValues.put(NAME_OF_STATION, "пос. Молодежный");
+		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
+		
+		stationsValues.put(NAME_OF_STATION, "Машиностроителей ул.");
+		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
+		
+		stationsValues.put(NAME_OF_STATION, "Школа");
+		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
+		
+		stationsValues.put(NAME_OF_STATION, "Детская библиотека");
+		db.insert(STATION_TABLE, NAME_OF_STATION, stationsValues);
+		
 		// setting data for table with name Time
 		db.execSQL("CREATE TABLE "+TIME_TABLE+" (_id INTEGER PRIMARY KEY  AUTOINCREMENT NOT NULL, "+
 					TIME_DEPARTURE+" TIME NOT NULL, "+DAY_OF_WEEK+" BOOLEAN NOT NULL, "
@@ -144,9 +164,51 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		
 		ContentValues timeValues = new ContentValues();
 		
-		timeValues.put(TIME_DEPARTURE, "19:04");
+		/*
+		
+		timeValues.put(TIME_DEPARTURE, "11:43");
 		timeValues.put(DAY_OF_WEEK, "true");
 		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
+		timeValues.put(TIME_DEPARTURE, "11:57");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
+		timeValues.put(TIME_DEPARTURE, "12:06");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
+		timeValues.put(TIME_DEPARTURE, "12:10");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
+		timeValues.put(TIME_DEPARTURE, "12:18");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
+		timeValues.put(TIME_DEPARTURE, "12:43");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
+		timeValues.put(TIME_DEPARTURE, "11:56");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "2");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
+		timeValues.put(TIME_DEPARTURE, "12:01");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "2");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
+		timeValues.put(TIME_DEPARTURE, "12:23");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "2");
 		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
 		
 		timeValues.put(TIME_DEPARTURE, "19:07");
@@ -174,6 +236,43 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		timeValues.put(ROUTE_ID, "1");
 		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
 		
+		*/
+		
+		timeValues.put(TIME_DEPARTURE, "12:13");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+
+		timeValues.put(TIME_DEPARTURE, "11:57");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+
+		timeValues.put(TIME_DEPARTURE, "11:58");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "2");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+
+		timeValues.put(TIME_DEPARTURE, "12:09");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "2");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+
+		timeValues.put(TIME_DEPARTURE, "12:15");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "2");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+
+		timeValues.put(TIME_DEPARTURE, "12:50");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "1");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
+		timeValues.put(TIME_DEPARTURE, "12:55");
+		timeValues.put(DAY_OF_WEEK, "true");
+		timeValues.put(ROUTE_ID, "2");
+		db.insert(TIME_TABLE, TIME_DEPARTURE, timeValues);
+		
 		// setting data for table with name Route
 		db.execSQL("CREATE TABLE "+ROUTE_TABLE+" (_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " + 
 					ROUTE_NAME+" TEXT NOT NULL);");
@@ -192,45 +291,108 @@ public class TransportHelper extends SQLiteOpenHelper implements BaseColumns{
 		
 		ContentValues tmTable = new ContentValues();
 		
+		/*
 		tmTable.put(BUS_ID, "1");
-		tmTable.put(STATION_ID, "1");
+		tmTable.put(STATION_ID, "4");
 		tmTable.put(TIME_ID, "1");
 		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
 		
 		tmTable.put(BUS_ID, "1");
-		tmTable.put(STATION_ID, "2");
+		tmTable.put(STATION_ID, "7");
 		tmTable.put(TIME_ID, "2");
 		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
 		
 		tmTable.put(BUS_ID, "1");
-		tmTable.put(STATION_ID, "3");
+		tmTable.put(STATION_ID, "8");
 		tmTable.put(TIME_ID, "3");
-		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
-		
-		tmTable.put(BUS_ID, "2");
-		tmTable.put(STATION_ID, "1");
-		tmTable.put(TIME_ID, "1");
-		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
-		
-		tmTable.put(BUS_ID, "3");
-		tmTable.put(STATION_ID, "1");
-		tmTable.put(TIME_ID, "1");
-		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
-		
-		tmTable.put(BUS_ID, "4");
-		tmTable.put(STATION_ID, "1");
-		tmTable.put(TIME_ID, "1");
 		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
 		
 		tmTable.put(BUS_ID, "1");
-		tmTable.put(STATION_ID, "3");
-		tmTable.put(TIME_ID, "3");
+		tmTable.put(STATION_ID, "9");
+		tmTable.put(TIME_ID, "4");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "5");
+		tmTable.put(TIME_ID, "5");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "8");
+		tmTable.put(TIME_ID, "11");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "9");
+		tmTable.put(TIME_ID, "1");
 		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
 		
 		tmTable.put(BUS_ID, "2");
 		tmTable.put(STATION_ID, "4");
+		tmTable.put(TIME_ID, "2");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "2");
+		tmTable.put(STATION_ID, "5");
+		tmTable.put(TIME_ID, "3");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "2");
+		tmTable.put(STATION_ID, "6");
+		tmTable.put(TIME_ID, "4");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "4");
+		tmTable.put(STATION_ID, "7");
+		tmTable.put(TIME_ID, "5");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		*/
+		
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "1");
+		tmTable.put(TIME_ID, "1");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "2");
+		tmTable.put(TIME_ID, "2");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "3");
+		tmTable.put(TIME_ID, "3");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+
+		tmTable.put(BUS_ID, "2");
+		tmTable.put(STATION_ID, "1");
+		tmTable.put(TIME_ID, "1");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+
+		tmTable.put(BUS_ID, "3");
+		tmTable.put(STATION_ID, "1");
+		tmTable.put(TIME_ID, "1");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+
+		tmTable.put(BUS_ID, "4");
+		tmTable.put(STATION_ID, "1");
+		tmTable.put(TIME_ID, "1");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "3");
+		tmTable.put(TIME_ID, "3");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+
+		tmTable.put(BUS_ID, "2");
+		tmTable.put(STATION_ID, "4");
 		tmTable.put(TIME_ID, "6");
 		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
+		tmTable.put(BUS_ID, "1");
+		tmTable.put(STATION_ID, "1");
+		tmTable.put(TIME_ID, "7");
+		db.insert(TIMETABLE_TABLE, BUS_ID, tmTable);
+		
 	}
 
 	@Override

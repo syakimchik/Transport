@@ -87,7 +87,7 @@ public class ResultSearchActivity extends Activity{
         			"as time_departure from timetable INNER JOIN bus, time, station ON timetable.bus_id=bus._id "+
         			"and timetable.station_id=station._id and timetable.time_id=time._id WHERE " +
         			"station.name_of_station="+"\""+ConstantValues.name_of_station+"\""+
-        			" and bus.type_transport_id=1 and bus.number_bus="+ConstantValues.number_of_bus+ 
+        			" and bus.type_transport_id="+ConstantValues.route_id+" and bus.number_bus="+ConstantValues.number_of_bus+ 
         			" and time.route_id="+ConstantValues.route_id+" and time_departure>"+"\""+hour_now+":"+
         			minute_now+":00"+"\""+" and time_departure<"+"\""+hour_future+":"+minute_future+":00"+"\"";
         }

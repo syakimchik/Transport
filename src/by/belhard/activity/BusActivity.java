@@ -90,6 +90,7 @@ public class BusActivity extends Activity{
 	
 	private void CallActivity()
 	{
+		ConstantValues.flag=true;
 		Intent intent = new Intent();
 		intent.setClass(getApplicationContext(), ResultSearchActivity.class);
 		startActivity(intent);

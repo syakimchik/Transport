@@ -107,6 +107,7 @@ public class SearchStationActivity extends Activity implements TextWatcher{
 				else{
 					ConstantValues.route_id=2;
 				}
+				ConstantValues.type_transport_id = radioId;
 				
 				Intent intent = new Intent();
 				intent.setClass(getApplicationContext(), ResultSearchActivity.class);
@@ -129,16 +130,19 @@ public class SearchStationActivity extends Activity implements TextWatcher{
 				if(rb.getText()==getString((R.string.buses)))
 				{
 					radioId=1;
+					ConstantValues.type_transport_id=1;
 					updateNumber(1);
 				}
 				if(rb.getText()==getString(R.string.trollybuses))
 				{
 					radioId=2;
+					ConstantValues.type_transport_id=2;
 					updateNumber(2);
 				}
 				if(rb.getText()==getString(R.string.trams))
 				{
 					radioId=3;
+					ConstantValues.type_transport_id=3;
 					updateNumber(3);
 				}
 			}

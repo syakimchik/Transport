@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/road"
+    android:orientation="vertical" 
+    android:paddingLeft="5dp">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/about_developer"
+        android:textColor="@color/Green1"
+        android:textSize="23dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:text="@string/coperight"
+        android:textColor="@color/DarkOrange1"
+        android:textSize="23dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/feedback"
+        android:textColor="@color/Green1"
+        android:textSize="23dp" />
+
+    <TextView
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/my_mail"
+        android:textColor="@color/DarkOrange1"
+        android:textSize="21dp" />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/about"
+        android:textColor="@color/Green1"
+        android:textSize="23dp" />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_application"
+        android:textColor="@color/DarkOrange1"
+        android:textSize="21dp" />
+
+</LinearLayout>

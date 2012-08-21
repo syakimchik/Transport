@@ -8,6 +8,8 @@
     <color name="black">#000000</color>
     <color name="firebrick">#B22222</color>
     <color name="yellow">#FFFF00</color>
+    <color name="Green1">#00FF00</color>
+    <color name="DarkOrange1">#FF7F00</color>
     <style name="PreferencesTheme" parent="@android:style/Theme.Black.NoTitleBar">
         <item name="android:windowBackground">@drawable/stars</item>
     </style>

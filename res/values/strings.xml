@@ -34,5 +34,9 @@
     <string name="number_tr">Номер:</string>
     <string name="current_time">Текущее время:</string>
     <string name="dialog">Пожалуйста, выберите направление</string>
+    <string name="about_developer">О разработчике:</string>
+    <string name="feedback">Обратная связь:</string>
+    <string name="about_application">Transport - это небольшое приложение, представляющее собой расписание городского транспорта г.Минска.</string>
+    <string name="my_mail">По всем вопросам и ошибкам пишите на yakimchik7@gmail.com</string>
 
 </resources>
